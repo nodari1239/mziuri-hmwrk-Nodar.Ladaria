@@ -1,3 +1,6 @@
+import {CORE_CONCEPTS} from "./data.js"
+
+
 const titles = ["fundamentials" , "crucial" , "core"]
 
 function GetRandomInt(){ 
@@ -22,7 +25,7 @@ function Header() {
 function CoreConcepts(props){
 return (
   <li>
-    <img src="" alt="" />
+    <img {props.img}/>
     <h3>{props.title}</h3>
     <p>{props.description}</p>
   </li>
@@ -36,10 +39,10 @@ function App() {
       <main>
         <section id = "core-concepts">
           <ul>
-            <CoreConcepts title="component" description = "this is description"/>
-            <CoreConcepts/>
-            <CoreConcepts/>
-            <CoreConcepts/>
+            <CoreConcepts img={CORE_CONCEPTS[0].image}  title={CORE_CONCEPTS[0].title} description = {CORE_CONCEPTS[0].description}/>
+            <CoreConcepts img={CORE_CONCEPTS[1].image}  title={CORE_CONCEPTS[1].title} description = {CORE_CONCEPTS[1].description}/>
+            <CoreConcepts img={CORE_CONCEPTS[2].image}  title={CORE_CONCEPTS[2].title} description = {CORE_CONCEPTS[2].description}/>
+            <CoreConcepts img={CORE_CONCEPTS[3].image}  title={CORE_CONCEPTS[3].title} description = {CORE_CONCEPTS[3].description}/>
           </ul>
         </section>
         <h2>Time to get started!</h2>
